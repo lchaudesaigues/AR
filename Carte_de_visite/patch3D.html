@@ -6,14 +6,22 @@
 <script src="https://unpkg.com/aframe-sprite-particles-component@^0.5.0/aframe-sprite-particles-component.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
+    
     <a-scene arjs='patternRatio: 0.9; trackingMethod: best;'>
   	   <a-marker-camera type="pattern" url="https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/pattern-coeur13.patt">
-         <a-entity position="0 0 0.5"
-                   scale="1 1 1"
+         
+         <a-image src="https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/Icone_patch_Inomedis.png" 
+                  width="0.20" 
+                  height="0.20"
+                  position="0.04 -1.05 0.155">
+           
+         <a-entity position="0 0 0"
+                   scale="5 5 5"
                    obj-model="obj: url(https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/a.obj); 
                              mtl: url(https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/a.mtl)"
                    animation="property: rotation; fill: forwards; from: 0 0 0; to: 0 360 0; easing: linear; loop: true; dur: 30000">
          </a-entity>
+           
          <a-entity position="0 1 0" 
                    sprite-particles="texture: url(https://harlyq.github.io/aframe-sprite-particles-component/assets/blob.png);
                                      spawnRate: 1; 
@@ -24,6 +32,7 @@
                                      color: #4EDDCC,#00BCE5;
                                      particleSize: 30">
          </a-entity>
+           
          <a-entity position="0 1 0" 
                    sprite-particles="texture: url(https://harlyq.github.io/aframe-sprite-particles-component/assets/blob.png);
                                      spawnRate: 1; 
@@ -34,6 +43,7 @@
                                      color: #4EDDCC,#00BCE5;
                                      particleSize: 20">
          </a-entity>
+           
          <a-entity position="0 1 0" 
                    sprite-particles="texture: url(https://harlyq.github.io/aframe-sprite-particles-component/assets/blob.png);
                                      spawnRate: 1; 
@@ -45,10 +55,6 @@
                                      fog : true;
                                      particleSize: 10">
          </a-entity>
-         <a-image src="https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/Icone_patch_Inomedis.png" 
-                  width="0.20" 
-                  height="0.20"
-                  position="0.04 -1.05 0.155">
   	   </a-marker-camera>
     </a-scene>
   </body>
