@@ -7,17 +7,22 @@
   <body style='margin : 0px; overflow: hidden;'>
     
     <a-scene arjs='patternRatio: 0.9; debugUIEnabled: false; trackingMethod: best;'>
-  	   <a-marker-camera type="pattern" url="https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/pattern-coeur6.patt">
+      
+  	   <a-assets>
+            <a-asset-item id="patch" src="https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/patch.glb"></a-asset-item>
+        </a-assets>
+      
+      <a-marker-camera type="pattern" url="https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/pattern-coeur6.patt">
          
          <a-image src="https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/Icone_patch_Inomedis.png" 
                   width="0.20" 
                   height="0.20"
                   position="0.04 -1.05 0.155">
            
-         <a-entity position="0 0 0"
+         <a-entity gltf-model="#patch"
+                   position="0 0 0"
                    scale="2"
-                   obj-model="obj: url(https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/a.obj); 
-                             mtl: url(https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/a.mtl)"
+                   obj-model=""
                    animation="property: rotation; fill: forwards; from: 0 0 0; to: 0 360 0; easing: linear; loop: true; dur: 30000">
          </a-entity>
            
