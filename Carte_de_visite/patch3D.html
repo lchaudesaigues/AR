@@ -8,13 +8,11 @@
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene arjs='debugUIEnabled: false; patternRatio: 0.9; trackingMethod: best; sourceWidth:1920; sourceHeight:1080;'
              vr-mode-ui="enabled: false">
-       <a-assets>
-         <a-asset-item id="patch" src="https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/patchV2.glb"></a-asset-item>
-       </a-assets>
   	   <a-marker-camera type="pattern" url="https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/pattern-coeur6.patt">
          <a-entity position="0 0 0"
                    scale="0.4 0.4 0.4"
-                   gltf-model="#patch"
+                   obj-model="obj: url(https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/a.obj); 
+                             mtl: url(https://gitcdn.link/repo/lchaudesaigues/AR/master/Carte_de_visite/a.mtl)"
                    animation="property: rotation; fill: forwards; from: 0 0 0; to: 0 360 0; easing: linear; loop: true; dur: 30000">
          </a-entity>
          <a-entity position="0 1 0" 
